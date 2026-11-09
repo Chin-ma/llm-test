@@ -1,7 +1,7 @@
 # Verdant & Co support assistant
 
-Live app: [YOUR LIVE URL]  |  Webhook: [YOUR LIVE URL]/webhook
-Agent login: [EMAIL] / [PASSWORD]
+Live app: https://verdant-98pd.onrender.com  |  Webhook: https://verdant-98pd.onrender.com/webhook
+Agent login: agent@verdant.test / change-me
 
 Customers send messages, an LLM drafts a reply from the knowledge base, and a support agent edits and approves it.
 

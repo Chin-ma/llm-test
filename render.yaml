@@ -1,0 +1,16 @@
+# Optional: Render blueprint. Create a Postgres (or use Supabase) and set the secrets in the dashboard.
+services:
+  - type: web
+    name: verdant-support
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - { key: DATABASE_SSL, value: "true" }
+      - { key: DATABASE_URL, sync: false }
+      - { key: JWT_SECRET, generateValue: true }
+      - { key: AGENT_EMAIL, sync: false }
+      - { key: AGENT_PASSWORD, sync: false }
+      - { key: LLM_API_KEY, sync: false }
